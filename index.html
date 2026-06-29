@@ -219,43 +219,63 @@ The year I realized I never want to celebrate without you.
 
 <section class="surprise">
 
-<h2>🎁 One Last Thing...</h2>
+    <h2>🎁 One Last Thing...</h2>
 
-<p>You've reached the final page.</p>
+    <p>You've reached the final page.</p>
+    <p>But your gift isn't unlocked yet.</p>
 
-<p>But your gift isn't unlocked yet.</p>
+    <h2>🔐 Secret Code Box</h2>
 
-<h3>Secret Code Box</h3>
+    <p>Enter the secret code to unlock your surprise ❤️</p>
 
-<label>Enter Secret Code</label>
+    <input
+        type="password"
+        id="secretCode"
+        placeholder="Enter Secret Code"
+    >
 
-<br><br>
+    <br><br>
 
-<input type="password" id="secretCode" placeholder="Enter Secret Code">
+    <button onclick="unlockGift()" class="unlock-btn">
+        Unlock My Gift ❤️
+    </button>
 
-<br><br>
+    <div id="videoSection" style="display:none; margin-top:40px;">
 
-<button onclick="unlockGift()" class="unlock-btn">
-Unlock My Gift ❤️
-</button>
+        <video controls width="900" style="max-width:100%; border-radius:20px;">
+            <source src="birthday.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-<div id="videoSection" style="display:none; margin-top:50px;">
+        <br><br><br>
 
-<iframe
-width="800"
-height="450"
-src="YOUR_VIDEO_LINK"
-title="Birthday Video"
-frameborder="0"
-allowfullscreen>
-</iframe>
+        <a href="YOUR_LINK_HERE" class="food-link">
+            🍕 One of my favorite things about us is enjoying food together ❤️
+        </a>
 
-<br><br><br>
-
-<a href="YOUR_LINK_HERE" class="food-link">
-🍽️ One of my favorite things about us is enjoying food together ❤️
-</a>
-
-</div>
+    </div>
 
 </section>
+
+<script>
+
+function unlockGift() {
+
+    let code = document.getElementById("secretCode").value;
+
+    if(code === "CR0202"){
+
+        document.getElementById("videoSection").style.display = "block";
+
+    }else{
+
+        alert("❌ Wrong Secret Code! Try Again ❤️");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

@@ -319,3 +319,30 @@ margin:30px auto;
 }
 
 }
+.unlock-btn{
+background:#ff5c8d;
+color:white;
+border:none;
+padding:15px 35px;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+}
+
+.unlock-btn:hover{
+background:#ff3f77;
+}
+
+.food-link{
+display:inline-block;
+margin-top:30px;
+font-size:22px;
+color:#d63384;
+text-decoration:none;
+font-weight:bold;
+}
+
+.food-link:hover{
+text-decoration:underline;
+}
